@@ -41,12 +41,12 @@
     <fieldset class="fieldset bg-white border-base-300 rounded-box w-xs border p-4 mx-auto rounded-2xl">
 
       <label class="label text-neutral font-bold">Mobile Number</label>
-      <input maxlength="11" minlength="11" type="text" class="input rounded-full bg-base-200" placeholder="Mobile Number" />
+      <input id="mobile-number" maxlength="11" minlength="11" type="text" class="input rounded-full bg-base-200" placeholder="Mobile Number" />
 
       <label class="label text-neutral font-bold">Password</label>
-      <input type="password" class="input rounded-full bg-base-200 " placeholder="Password" />
+      <input id="password" type="password" class="input rounded-full bg-base-200 " placeholder="Password" />
 
-      <button class="btn btn-primary mt-4 rounded-full hover:bg-indigo-500 hover:border-hidden">Login</button>
+      <button id="login-btn" class="btn btn-primary mt-4 rounded-full hover:bg-indigo-500 hover:border-hidden">Login</button>
 
       <button class="btn bg-white text-black border-[#e5e5e5] mt-2 rounded-lg hover:bg-blue-500">
         <svg aria-label="Email icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -72,6 +72,10 @@
       </button>
     </fieldset>
   </div>
+
+  <script src="script/login.js"></script>
 </body>
+
+
 
 </html>
