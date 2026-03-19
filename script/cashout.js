@@ -37,7 +37,7 @@ document.getElementById("cashOut-btn").addEventListener("click", function () {
         alert("Cash Out successful!");
         console.log('New Balance: ', newBalance);
 
-        balanceElement.innerText = newBalance.toFixed(2);
+        balanceElement.innerText = newBalance;
 
 
     }

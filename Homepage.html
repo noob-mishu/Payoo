@@ -132,9 +132,45 @@
   </section>
 
 
+  <section id="addMoney" class="w-11/12 mx-auto py-5">
+    <h2 class="text-xl font-bold mb-5">Add Money</h2>
+    <div>
+      <fieldset class="fieldset bg-white border-base-300 rounded-box w-full border p-4 mx-auto rounded-2xl">
+
+        <label class="label text-neutral font-bold">Select Bank</label>
+        <select id="addMoney-BankAccount" class="select rounded-full bg-base-200 w-full">
+          <option disabled selected>Select a Bank</option>
+          <option value="bank1">Sonali Bank</option>
+          <option value="bank2">Agrani Bank</option>
+          <option value="bank3">Duch Bangla Bank</option>
+        </select>
+
+        <label class="label text-neutral font-bold">Bank Account Number</label>
+        <input id="addMoney-BankAccountNumber" maxlength="11" minlength="11" type="text"
+          class="input rounded-full bg-base-200 w-full" placeholder="Enter Bank Account Number" />
+
+        <label class="label text-neutral font-bold">Amount</label>
+        <input id="addMoney-Amount" type="number"
+          class="input rounded-full bg-base-200 w-full" placeholder="Enter Amount for Deposit" />
+
+        <label class="label text-neutral font-bold">Pin</label>
+        <input id="addMoney-Pin" type="password" maxlength="4" class="input rounded-full bg-base-200 w-full"
+          placeholder="Pin Number" />
+
+        <button id="addMoney-btn"
+          class="btn btn-primary mt-4 rounded-full hover:bg-indigo-500 hover:border-hidden">Add Money</button>
+
+
+      </fieldset>
+    </div>
+
+  </section>
+
+
 
 
   <script src="script/common.js"></script>
+  <script src="script/addmoney.js"></script>
   <script  src="script/cashout.js"></script>
 </body>
 
