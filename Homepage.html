@@ -66,73 +66,52 @@
   <section class="w-11/12 mx-auto">
     <div class="grid grid-cols-3 gap-2">
       <!-- Add Money -->
-      <button class="btn flex-col h-full items-center justify-center rounded-lg py-5 space-y-2">
+      <button onclick="showOnly('addMoney',this)"
+        class="menu-btn btn flex-col h-full items-center justify-center rounded-lg py-5 space-y-2 hover:bg-indigo-200">
         <img src="./assets/opt-1.png" alt="">
         <p class="text-neutral/50">Add Money</p>
       </button>
 
       <!-- Cash Out -->
-      <div class="btn flex-col h-full items-center justify-center rounded-lg py-5 space-y-2">
+      <div onclick="showOnly('cashOut',this)"
+        class="menu-btn btn flex-col h-full items-center justify-center rounded-lg py-5 space-y-2 hover:bg-indigo-200">
         <img src="./assets/opt-2.png" alt="">
         <p class="text-neutral/50">Cash Out</p>
       </div>
 
-      <!-- Transfer Money -->
-      <div class="btn flex-col h-full items-center justify-center rounded-lg py-5 space-y-2">
+      <!-- Send Money -->
+      <div onclick="showOnly('sendMoney',this)"
+        class="menu-btn btn flex-col h-full items-center justify-center rounded-lg py-5 space-y-2 hover:bg-indigo-200">
         <img src="./assets/opt-3.png" alt="">
         <p class="text-neutral/50">Send Money</p>
       </div>
 
 
       <!-- Get Bonus -->
-      <div class="btn flex-col h-full items-center justify-center rounded-lg py-5 space-y-2">
+      <div onclick="showOnly('getBonus',this)"
+        class="menu-btn btn flex-col h-full items-center justify-center rounded-lg py-5 space-y-2 hover:bg-indigo-200">
         <img src="./assets/opt-4.png" alt="">
         <p class="text-neutral/50">Get Bonus</p>
       </div>
 
       <!-- Pay Bill -->
-      <div class="btn flex-col h-full items-center justify-center rounded-lg py-5 space-y-2">
+      <div onclick="showOnly('payBill',this)"
+        class="menu-btn btn flex-col h-full items-center justify-center rounded-lg py-5 space-y-2 hover:bg-indigo-200">
         <img src="./assets/opt-5.png" alt="">
         <p class="text-neutral/50">Pay Bill</p>
       </div>
 
       <!-- Transactions -->
-      <div class="btn flex-col h-full items-center justify-center rounded-lg py-5 space-y-2">
+      <div onclick="showOnly('transactionHistory',this)"
+        class="menu-btn btn flex-col h-full items-center justify-center rounded-lg py-5 space-y-2 hover:bg-indigo-200">
         <img src="./assets/opt-6.png" alt="">
         <p class="text-neutral/50">Transactions</p>
       </div>
 
     </div>
   </section>
-
-  <section id="cashOut" class="w-11/12 mx-auto py-5">
-    <h2 class="text-xl font-bold mb-5">Cash Out</h2>
-    <div>
-      <fieldset class="fieldset bg-white border-base-300 rounded-box w-full border p-4 mx-auto rounded-2xl">
-
-        <label class="label text-neutral font-bold">Agent Number</label>
-        <input id="cashOut-Number" maxlength="11" minlength="11" type="text"
-          class="input rounded-full bg-base-200 w-full" placeholder="Enter Agent Number" />
-
-        <label class="label text-neutral font-bold">Amount</label>
-        <input id="cashOut-Amount" type="number"
-          class="input rounded-full bg-base-200 w-full" placeholder="Enter Amount for Withdraw" />
-
-        <label class="label text-neutral font-bold">Pin</label>
-        <input id="cashOut-Pin" type="password" maxlength="4" class="input rounded-full bg-base-200 w-full"
-          placeholder="Pin" />
-
-        <button id="cashOut-btn"
-          class="btn btn-primary mt-4 rounded-full hover:bg-indigo-500 hover:border-hidden">Withdraw Money</button>
-
-
-      </fieldset>
-    </div>
-
-  </section>
-
-
-  <section id="addMoney" class="w-11/12 mx-auto py-5">
+  <!-- Add Money Section -->
+  <section id="addMoney" class="w-11/12 mx-auto py-5 hidden">
     <h2 class="text-xl font-bold mb-5">Add Money</h2>
     <div>
       <fieldset class="fieldset bg-white border-base-300 rounded-box w-full border p-4 mx-auto rounded-2xl">
@@ -150,15 +129,72 @@
           class="input rounded-full bg-base-200 w-full" placeholder="Enter Bank Account Number" />
 
         <label class="label text-neutral font-bold">Amount</label>
-        <input id="addMoney-Amount" type="number"
-          class="input rounded-full bg-base-200 w-full" placeholder="Enter Amount for Deposit" />
+        <input id="addMoney-Amount" type="number" class="input rounded-full bg-base-200 w-full"
+          placeholder="Enter Amount for Deposit" />
 
         <label class="label text-neutral font-bold">Pin</label>
         <input id="addMoney-Pin" type="password" maxlength="4" class="input rounded-full bg-base-200 w-full"
           placeholder="Pin Number" />
 
-        <button id="addMoney-btn"
-          class="btn btn-primary mt-4 rounded-full hover:bg-indigo-500 hover:border-hidden">Add Money</button>
+        <button id="addMoney-btn" class="btn btn-primary mt-4 rounded-full hover:bg-indigo-500 hover:border-hidden">Add
+          Money</button>
+
+
+      </fieldset>
+    </div>
+
+  </section>
+
+
+  <!-- Cash Out Section -->
+  <section id="cashOut" class="w-11/12 mx-auto py-5 hidden">
+    <h2 class="text-xl font-bold mb-5">Cash Out</h2>
+    <div>
+      <fieldset class="fieldset bg-white border-base-300 rounded-box w-full border p-4 mx-auto rounded-2xl">
+
+        <label class="label text-neutral font-bold">Agent Number</label>
+        <input id="cashOut-Number" maxlength="11" minlength="11" type="text"
+          class="input rounded-full bg-base-200 w-full" placeholder="Enter Agent Number" />
+
+        <label class="label text-neutral font-bold">Amount</label>
+        <input id="cashOut-Amount" type="number" class="input rounded-full bg-base-200 w-full"
+          placeholder="Enter Amount for Withdraw" />
+
+        <label class="label text-neutral font-bold">Pin</label>
+        <input id="cashOut-Pin" type="password" maxlength="4" class="input rounded-full bg-base-200 w-full"
+          placeholder="Pin" />
+
+        <button id="cashOut-btn"
+          class="btn btn-primary mt-4 rounded-full hover:bg-indigo-500 hover:border-hidden">Withdraw Money</button>
+
+
+      </fieldset>
+    </div>
+
+  </section>
+
+
+
+  <!-- Send Money Section -->
+   <section id="sendMoney" class="w-11/12 mx-auto py-5 hidden">
+    <h2 class="text-xl font-bold mb-5">Send Money</h2>
+    <div>
+      <fieldset class="fieldset bg-white border-base-300 rounded-box w-full border p-4 mx-auto rounded-2xl">
+
+        <label class="label text-neutral font-bold">User Account Number</label>
+        <input id="sendMoney-Number" maxlength="11" minlength="11" type="text"
+          class="input rounded-full bg-base-200 w-full" placeholder="Enter User Account Number" />
+
+        <label class="label text-neutral font-bold">Amount</label>
+        <input id="sendMoney-Amount" type="number" class="input rounded-full bg-base-200 w-full"
+          placeholder="Enter Amount for Send" />
+
+        <label class="label text-neutral font-bold">Pin</label>
+        <input id="sendMoney-Pin" type="password" maxlength="4" class="input rounded-full bg-base-200 w-full"
+          placeholder="Pin" />
+
+        <button id="sendMoney-btn"
+          class="btn btn-primary mt-4 rounded-full hover:bg-indigo-500 hover:border-hidden">Send Money</button>
 
 
       </fieldset>
@@ -169,9 +205,13 @@
 
 
 
+
+
+
   <script src="script/common.js"></script>
   <script src="script/addmoney.js"></script>
-  <script  src="script/cashout.js"></script>
+  <script src="script/cashout.js"></script>
+  <script src="script/sendmoney.js"></script>
 </body>
 
 

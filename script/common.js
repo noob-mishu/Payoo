@@ -25,3 +25,29 @@ function setBalance(newBalance)
     balanceElement.innerText = newBalance;
 }
 
+
+// function for showing only selected Section
+function showOnly(id,btn)
+{
+    const addMoney= document.getElementById("addMoney");
+    const cashOut= document.getElementById("cashOut");
+
+    // hide all sections
+    addMoney.classList.add("hidden");
+    cashOut.classList.add("hidden");
+
+    // show only the selected section
+    const selected= document.getElementById(id);
+    selected.classList.remove("hidden");
+
+     // remove active styles
+    const buttons = document.querySelectorAll(".menu-btn");
+    buttons.forEach(b => {
+        b.classList.remove("bg-indigo-400");
+    });
+
+    // add active style
+    btn.classList.add("bg-indigo-400");
+
+}
+
