@@ -36,8 +36,25 @@ document.getElementById("cashOut-btn").addEventListener("click", function () {
     {
         alert("Cash Out successful!");
         console.log('New Balance: ', newBalance);
-
         balanceElement.innerText = newBalance;
+
+        // 1. get the tranction history element
+        const transactionHistory = document.getElementById("history-container");
+
+        // 2. create a new div
+        const newTransaction = document.createElement("div");
+
+        // 3. add the details to the new div
+        newTransaction.innerHTML = `
+            <div class="history-card p-5 bg-base-100">
+                 Cash Out Successful from ${agentNumber}, Amount: ${cashOutAmount} at ${new Date().toLocaleTimeString()}
+            </div>
+        `;
+
+        // 4.append the new div to the transaction history
+        transactionHistory.appendChild(newTransaction);
+
+        
 
 
     }
