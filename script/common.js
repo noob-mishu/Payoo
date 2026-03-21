@@ -31,10 +31,14 @@ function showOnly(id,btn)
 {
     const addMoney= document.getElementById("addMoney");
     const cashOut= document.getElementById("cashOut");
+    const sendMoney= document.getElementById("sendMoney");
+    const getBonus = document.getElementById("getBonus");
 
     // hide all sections
     addMoney.classList.add("hidden");
     cashOut.classList.add("hidden");
+    sendMoney.classList.add("hidden");
+    getBonus.classList.add("hidden");
 
     // show only the selected section
     const selected= document.getElementById(id);
@@ -43,11 +47,11 @@ function showOnly(id,btn)
      // remove active styles
     const buttons = document.querySelectorAll(".menu-btn");
     buttons.forEach(b => {
-        b.classList.remove("bg-indigo-400");
+        b.classList.remove("bg-indigo-400", "text-white");
     });
 
     // add active style
-    btn.classList.add("bg-indigo-400");
+    btn.classList.add("bg-indigo-400", "text-white");
 
 }
 
